@@ -22,6 +22,9 @@ WebDriver driver1;
 	@FindBy(how=How.XPATH, using = "//*[@id=\"customer_login\"]/div[1]/form/p[3]/input[3]")
 	WebElement Signin;
 	
+	@FindBy(how=How.XPATH, using = "//*[@id=\"page-36\"]/div/div[1]/nav/ul/li[6]/a")
+	WebElement Logout;
+	
 	public LoginPage(WebDriver driver)
 	{
 		this.driver1=driver;
@@ -32,6 +35,7 @@ WebDriver driver1;
 		Username.sendKeys(uid);
 		Password.sendKeys(pass);
 		Signin.click();	
+		Logout.click();
 	}
 
 	public boolean verifyLoginPage()
